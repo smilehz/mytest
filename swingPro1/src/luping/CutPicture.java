@@ -56,7 +56,7 @@ public class CutPicture extends JWindow {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+				//iuhiuiyoioui
 			}
 		});
 	}
