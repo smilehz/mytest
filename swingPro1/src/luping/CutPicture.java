@@ -19,7 +19,7 @@ public class CutPicture extends JWindow {
 	private int orgy;
 	private int endx;
 	private int endy;
-	private BufferedImage tempImage;
+	private BufferedImage image;
 	private BufferedImage saveimage;
 	public CutPicture() throws AWTException {
 		//获取屏幕尺寸(Dimension定义图片的尺寸,Toolkit 定义的一些方法能直接查询本机操作系统)
