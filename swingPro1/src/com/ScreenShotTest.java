@@ -178,7 +178,7 @@ public class ScreenShotTest {
 	  JToolBar toolBar=new JToolBar("½ØÍ¼");
 
 	  //±£´æ°´Å¥
-	  JButton saveButton=new JButton(new ImageIcon("images/save.png"));
+	  JButton saveButton=new JButton("±£´æ");
 	  saveButton.addActionListener(new ActionListener() { 
 	   @Override
 	   public void actionPerformed(ActionEvent e) {
