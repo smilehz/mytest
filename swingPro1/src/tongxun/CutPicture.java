@@ -19,8 +19,7 @@ public class CutPicture extends JWindow {
 	private int orgy;
 	private int endx;
 	private int endy;
-	private BufferedImage tempImage;
-	private BufferedImage saveimage;
+	private BufferedImage image;
 	public CutPicture() throws AWTException {
 		//获取屏幕尺寸(Dimension定义图片的尺寸,Toolkit 定义的一些方法能直接查询本机操作系统)
 		Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -28,19 +27,20 @@ public class CutPicture extends JWindow {
 		Robot robot = new Robot();
 		BufferedImage image = robot.createScreenCapture(screenRectangle);
 		this.addMouseListener(new MouseListener() {
-			
+				
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// 鼠标按下记录坐标
+				orgx = e.getX();
+				orgy = e.getY();
+				
+				
+			}
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				// TODO Auto-generated method stub
 				
 			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
 			@Override
 			public void mouseExited(MouseEvent e) {
 				// TODO Auto-generated method stub
@@ -60,8 +60,6 @@ public class CutPicture extends JWindow {
 			}
 		});
 	}
-	
-	
 	
 
 }

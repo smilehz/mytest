@@ -72,19 +72,18 @@ public class ScreenShotTest {
 	   this.addMouseListener(new MouseAdapter() {
 	    @Override
 	   public void mousePressed(MouseEvent e) {
-	    //鼠标松开时记录结束点坐标，并隐藏操作窗口
+	    //鼠标按下时记录坐标，并隐藏操作窗口
 	             orgx = e.getX();
 	             orgy = e.getY();
-
-	             if(tools!=null){
-	              tools.setVisible(false);
-	             }
+                 tools.setVisible(false);
+	            
 	   }
 	   @Override
 	   public void mouseReleased(MouseEvent e) {
 	    //鼠标松开时，显示操作窗口
 	    if(tools==null){
-	     tools=new ToolsWindow(ScreenShotWindow.this,e.getX(),e.getY());
+	    tools=new ToolsWindow(ScreenShotWindow.this,e.getX()-50,e.getY()-50);
+	    
 	    }else{
 	     tools.setLocation(e.getX(),e.getY());
 	    }
