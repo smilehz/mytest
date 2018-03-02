@@ -136,8 +136,8 @@ public class ScreenShotTest {
 	  jfc.setFileFilter(filter);
 
 	  //初始化一个默认文件（此文件会生成到桌面上）
-	  //SimpleDateFormat sdf = new SimpleDateFormat("yyyymmddHHmmss");
-	     //String fileName = sdf.format(new Date());
+	  	/*SimpleDateFormat sdf = new SimpleDateFormat("yyyymmddHHmmss");
+	    String fileName = sdf.format(new Date());*/
 	     File filePath = FileSystemView.getFileSystemView().getHomeDirectory();
 	     File defaultFile = new File("new 1");
 	     jfc.setSelectedFile(defaultFile);
